@@ -1,3 +1,4 @@
+#1 Task One (to_do_list)
 import tkinter
 import tkinter.messagebox
 import pickle
@@ -44,3 +45,51 @@ remove_task_button = tkinter.Button(window, text="CLICK TO DELETE TASK",font=("a
 remove_task_button.pack()
 
 window.mainloop()
+ 
+#Task 2 my_calculator
+print("MINI CALCULATOR")
+a = float(input("enter the first no."))
+b=float(input("enter the second no."))
+#options
+print("press 1 if you want to add the numbers")
+print("press 2 if you want to sub. the numbers")
+print("press 3 if you want to multiply the numbers")
+print("press 4 if you want to div. the numbers")
+
+choice=int(input("enter your choice from 1-4"))
+#condition
+if choice==1:
+    print(a+b)
+elif choice==2:
+    print(a-b)    
+elif choice==3:
+    print(a*b)
+elif choice==4:
+    print(a/b) 
+else:
+    print("invalid choice")
+
+Task 3 
+#password generator
+#first we will import the necessary modules
+
+import random
+#define data
+lower_case= "abcdefghijklmnopqrstuvwxxyz"
+upper_case= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+num="1234567890"
+special_characters="@#$&!{}()[]"
+
+#combine the data
+ans= lower_case+ upper_case + num + special_characters
+
+#taking input length
+len= int(input("enter the length of password"))
+#using random
+temp= random.sample(ans,len)
+
+#generate password
+password= "".join(temp)
+
+#print password
+print("password",password)
